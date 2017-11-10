@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.assignment1.MainActivity">
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="308dp"
+        android:layout_height="171dp"
+        android:fontFamily="cursive"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        android:drawableTop="@drawable/rmit"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="31dp"
+        app:layout_constraintHorizontal_bias="0.513" />
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Please insert your name"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_editor_absoluteY="100dp"
+        app:layout_constraintHorizontal_bias="0.81" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:onClick="welcomeMessage"
+        android:enabled="false"
+        android:text="Login"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:entries="@array/app_class"
+        android:prompt="@string/class_prompt"
+        android:spinnerMode="dropdown"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username"
+        app:layout_constraintHorizontal_bias="0.585" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:focusable="auto"
+        android:text="All of the information above are correct"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinner1"
+
+        />
+    <TextView
+        android:id="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="37dp"
+        android:text="Gender:"
+        android:textSize="18sp"
+        app:layout_constraintRight_toLeftOf="@id/spinner1"
+        app:layout_constraintTop_toBottomOf="@id/username"
+        android:layout_marginTop="21dp" />
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="46dp"
+        android:text="Name:"
+        android:textSize="18sp"
+        app:layout_constraintRight_toLeftOf="@id/username"
+        app:layout_constraintBottom_toTopOf="@id/gender"
+        android:layout_marginBottom="33dp" />
+
+
+
+
+</android.support.constraint.ConstraintLayout>

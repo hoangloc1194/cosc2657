@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LH Application</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="class_prompt">Choose a Class</string>
+
+    <string-array name="app_class">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Unknown</item>
+    </string-array>
+
+
+</resources>

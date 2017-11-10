@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"> <!--IMPORTANT otherwise backgrnd img. will not fill the whole screen -->
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.assignment1.MoneyActivity">
+
+    <EditText
+        android:id="@+id/resultVND"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="74dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/vndToUsd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="VND --> USD"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/resultVND"
+        android:onClick="vndToUSD"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/usdToVND"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="USD --> VND"
+        app:layout_constraintTop_toBottomOf="@id/resultVND"
+        app:layout_constraintLeft_toRightOf="@id/vndToUsd"
+        android:onClick="usdToVND"
+        android:enabled="false"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="112dp" />
+
+    <EditText
+        android:id="@+id/resultUsd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="19dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="0"
+        android:enabled="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vndToUsd" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="102dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="cursive"
+        android:text="Money Converter"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="48dp"
+        android:layout_height="34dp"
+        android:text="VND"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toRightOf="@id/resultVND"
+        app:layout_constraintTop_toBottomOf="@id/textView4"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="22dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:text="USD"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toRightOf="@id/resultUsd"
+        app:layout_constraintTop_toBottomOf="@id/usdToVND"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="19dp" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:checked="true"
+        android:text="ToggleButton"
+        android:textOff="USD -> VND"
+        android:textOn="VND -> USD"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/resultUsd" />
+
+
+</android.support.constraint.ConstraintLayout>
+</ScrollView>

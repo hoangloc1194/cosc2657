@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"> <!--IMPORTANT otherwise backgrnd img. will not fill the whole screen -->
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.assignment1.SurveyActivity">
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="cursive"
+        android:text="Survey"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="154dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+    <TextView
+        android:id="@+id/question1"
+        android:layout_width="381dp"
+        android:layout_height="65dp"
+        android:layout_toEndOf="@+id/radioGroup1"
+        android:layout_toRightOf="@+id/radioGroup1"
+        app:layout_constraintTop_toBottomOf="@id/textView7"
+        android:fontFamily="serif"
+        android:paddingLeft="10dp"
+        android:maxWidth="130dp"
+        android:text="1. Overall, I am satisfied with the quality of this course"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp" />
+<RadioGroup
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintTop_toBottomOf="@id/question1"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    android:id="@+id/radioGroup1">
+
+
+    <RadioButton
+        android:id="@+id/answer1.1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:maxWidth="80dp"
+        android:onClick="onRadioButtonClicked"
+        android:text="Strongly Disagree"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="50dp" />
+
+    <RadioButton
+        android:id="@+id/answer1.2"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:maxWidth="80dp"
+        android:onClick="onRadioButtonClicked"
+        android:text="Disagree"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="200dp"
+        tools:layout_editor_absoluteY="47dp" />
+
+    <RadioButton
+        android:id="@+id/answer1.3"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:onClick="onRadioButtonClicked"
+        android:text="Agree"
+        android:textSize="10sp"
+        android:maxWidth="80dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="263dp"
+        tools:layout_editor_absoluteY="47dp" />
+
+    <RadioButton
+        android:id="@+id/answer1.4"
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:maxWidth="80dp"
+        android:onClick="onRadioButtonClicked"
+        android:text="Strongly Agree"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="316dp"
+        tools:layout_editor_absoluteY="47dp" />
+</RadioGroup>
+
+    <TextView
+        android:id="@+id/question2"
+        android:layout_width="381dp"
+        android:layout_height="64dp"
+        android:layout_below="@+id/question1"
+        android:layout_marginTop="40dp"
+        android:fontFamily="serif"
+        android:paddingLeft="10dp"
+        android:maxWidth="130dp"
+        android:text="2. I liked seeing my marks improve as I progressed through the study"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup1" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/question2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteX="53dp">
+
+        <RadioButton
+            android:id="@+id/answer2.1"
+            android:layout_width="80dp"
+            android:layout_height="44dp"
+            android:layout_alignTop="@+id/question2"
+            android:layout_toLeftOf="@+id/answer2.2"
+            android:layout_toStartOf="@+id/answer2.2"
+            android:maxWidth="70dp"
+            android:onClick="onRadioButtonClicked"
+            android:text="Strongly Disagree"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="130dp"
+            tools:layout_editor_absoluteY="129dp" />
+
+        <RadioButton
+            android:id="@+id/answer2.2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:maxWidth="80dp"
+            android:onClick="onRadioButtonClicked"
+            android:text="Disagree"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="200dp"
+            tools:layout_editor_absoluteY="129dp" />
+
+        <RadioButton
+            android:id="@+id/answer2.3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/answer2.4"
+            android:layout_toLeftOf="@+id/answer2.4"
+            android:layout_toStartOf="@+id/answer2.4"
+            android:onClick="onRadioButtonClicked"
+            android:text="Agree"
+            android:textSize="10sp"
+            android:maxWidth="80dp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="263dp"
+            tools:layout_editor_absoluteY="129dp" />
+
+        <RadioButton
+            android:id="@+id/answer2.4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="0dp"
+            android:maxWidth="80dp"
+            android:onClick="onRadioButtonClicked"
+            android:text="Strongly Agree"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteX="316dp"
+            tools:layout_editor_absoluteY="129dp" />
+    </RadioGroup>
+
+
+
+
+</android.support.constraint.ConstraintLayout>
+</ScrollView>
